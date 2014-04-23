@@ -34,6 +34,11 @@ memset(dmxdata, 0, 512);
 sendShowJockeyDeviceBuf(devices->device, dmxdata, 512);
 ```
 
+Thanks
+=======
+Special thanks to ShowJockey. They give me the source code of their own MAC OS driver, and gave me the permission to publish my code as an open source project.
+
+
 License
 =======
 
