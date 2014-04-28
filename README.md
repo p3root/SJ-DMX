@@ -9,8 +9,8 @@ Usage
 You need automake tools to build this library. Just run
 ```
 ./autogen.sh
-./configure
 make
+make install
 ```
 
 Scan for ShowJockey USB Devices
