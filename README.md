@@ -6,7 +6,12 @@ A linux library to use USB DMX Adapter from ShowJockey (http://www.showjockey.co
 
 Usage
 ======
-I developed the library in the QtCreator, but I used no libraries from QT, so just run qmake to get a makefile, then run make.
+You need automake tools to build this library. Just run
+```
+./autogen.sh
+./configure
+make
+```
 
 Scan for ShowJockey USB Devices
 ```
