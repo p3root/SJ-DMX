@@ -324,14 +324,12 @@ int sendShowJockeyDeviceBuf(struct ShowJockeyDevice *dev, unsigned char *buffer,
     unsigned char *writeBuffer = buffer;
 
     unsigned char *bulkBuffer = (unsigned char*)malloc(maxPacketSizeOut);
-    unsigned char bulkPos[2];
 
     int bulkDataSize = maxPacketSizeOut - 2;
 
     while(leftWriteSize > 0) {
         memset(bulkBuffer, 0, maxPacketSizeOut);
-        *bulkPos = alreadyWrittenSize;
-        memcpy(bulkBuffer, bulkPos, 2);
+        memcpy(bulkBuffer, &alreadyWrittenSize, 2);
 
         if(leftWriteSize > bulkDataSize) {
             writeSize = bulkDataSize;
